@@ -10,3 +10,8 @@ body {
     background-color: black;
     margin-top: 10rem;
 }
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
