@@ -1,20 +1,23 @@
 /**
  *Canvas and Context setup
  */
-var canvas = document.getElementById("gamecanvas");
-var ctx = canvas.getContext("2d");
-ctx.canvas.width = window.innerWidth - 30;
-ctx.canvas.height = window.innerHeight - 50;
+let canvas = document.getElementById('mycanvas');
+let ctx = canvas.getContext('2d');
 
 /**Ball variables */
-var ballRadius = 10;
-var x = canvas.width / 2;
-var y = canvas.height - 90;
-var dx = 2;
-var dy = -2;
-var offsetBottom = 30;
+let ballRadius = 10;
+let x = canvas.width / 2;
+let y = canvas.height - 90;
+let dx = 2;
+let dy = -2;
+let offsetBottom = 30;
 
-/**Paddle & movement variable variables*/
-var rightPressed = false;
-var leftPressed = false;
-var PADDLE_VARS = { height: 10, width: 65, x: (canvas.width - 65) / 2 };
+/**creating the paddle */
+let paddleHeight = 12;
+let paddleWidth = 72;
+let rightPressed = false;
+let leftPressed = false;
+
+/**Adding the Brick variables */
+let currentColumnNums = window.innerWidth - 30 < 640 ? 9 : window.innerWidth - 30 < 1024 ? 15 : 20;
+let BRICK_CONSTANTS = { rowCount: currentColumnNums, columnCount: 3, width: 65, height: 20, padding: 10, offsetTop: 30, offsetLeft: 30 };
